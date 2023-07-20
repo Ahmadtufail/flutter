@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+This import is uesd for imporrt all the widgets(tags) from material.dart.
+
+void main() {
+  runApp(const Home());
+}
+
+runApp is a funtion Home is the name of first page 
+void main hum iss liyah lagatay hy q k yeah first page open krny main hamari help krta hy
+
+class Home extends StatelessWidget {
+  const Home({super.key});
+	Container:container work as like div work in html.
+	Widget::yeah tag hoty hy jiss trha html main tag use krtay hy uss trha flutter main hum widget use krty hy. 
+	
+'stateless':
+ widget yeah new page bananay k liyah istamal hota
+iss stateless widget main hum ny "Home" name k page banaya hy jiss ka name hum ny 'void main'k undaar likha hy
+		
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(		MaterialApp:Yeah hamay theme bana k daytah hy mean yeah hamary text koo color krta hy
+      home: Scaffold(			Scaffold:yeah hamary text ya joo kuch bii likty hy ussy arrange krata hy
+        body: Text('Hello World This is my New Page'),		body:body k andar hum ny ' Text ' ka widget lagya hy joo page py text add kry ga 
+      ),
+
+Center:
+center likny sy hamara text center main ahy ga
+ElevatedButton:
+yeah hum aik button ban k dah ga lakin uss k liya  2 Conditions req hy 
+First: child mean button ka name
+Second: onpressed mean button ko press krny sy kya hoo ga
+
+    );
+  }
+}
