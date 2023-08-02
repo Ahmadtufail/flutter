@@ -40,10 +40,12 @@ class project3 extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        margin:const EdgeInsets.all(15),
+                        margin:const EdgeInsets.all(10),
                         height: 50,
                         width: 50,
-                        child: Image.asset('assets/images/im3.jpg'),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                            child: Image.asset('assets/images/pic6.png')),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -62,11 +64,13 @@ class project3 extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        padding:const EdgeInsets.all(05),
-                        margin:const EdgeInsets.all(15),
+                        padding:const EdgeInsets.all(02),
+                        margin:const EdgeInsets.all(8),
                         height: 50,
-                        width: 50,
-                        child: Image.asset('assets/images/im1.jpg'),
+                        width: 54,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset('assets/images/pic7.jpg')),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -85,11 +89,13 @@ class project3 extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        padding:const EdgeInsets.all(05),
-                        margin:const EdgeInsets.all(15),
+                        padding:const EdgeInsets.all(02),
+                        margin:const EdgeInsets.all(8),
                         height: 50,
-                        width: 50,
-                        child: Image.asset('assets/images/im2.jpg'),
+                        width: 53,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset('assets/images/pic10.jpg')),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -108,11 +114,13 @@ class project3 extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        padding:const EdgeInsets.all(05),
-                        margin:const EdgeInsets.all(15),
+                        padding:const EdgeInsets.all(02),
+                        margin:const EdgeInsets.all(10),
                         height: 50,
                         width: 50,
-                        child: Image.asset('assets/images/im3.jpg'),
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset('assets/images/pic6.png')),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
@@ -128,58 +136,190 @@ class project3 extends StatelessWidget {
                         ),),
                     ],
                   ),
+                  Column(
+                    children: [
+                      Container(
+                        padding:const EdgeInsets.all(01),
+                        margin:const EdgeInsets.all(10),
+                        height: 50,
+                        width: 53,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset('assets/images/pic7.jpg')),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Colors.red,
+                          ),
+                        ),
+                      ),
+                      Text('Pieters',
+                        style: TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                        ),),
+                    ],
+                  ),
 
                 ],
               ),
               Container(
-                color: Colors.white,
-                padding:const EdgeInsets.only(top: 40,left: 30),
+                margin:const EdgeInsets.only(top: 25),
+                padding:const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  color: Color(0xffe2dcd7),
+                ),
+                child: Container(
+                padding:const EdgeInsets.all(20),
 
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding:const EdgeInsets.all(05),
-                          margin:const EdgeInsets.all(15),
-                          height: 50,
-                          width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.white,
+                  ),
 
-                          child: Image.asset('assets/images/im3.jpg'),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: Colors.red,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                            Container(
+                            padding:const EdgeInsets.all(01),
+                              height: 55,
+                              width: 50,
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15),
+                                  child: Image.asset('assets/images/pic6.png')),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: Colors.red,
+                                ),
+                              ),
+                            ),
+                          Container(
+                            margin:const EdgeInsets.only(left: 9),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Steve Johnson',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w700,
+                                  ),),
+                                Text('30 Sec Ago',
+                                  style: TextStyle(
+                                    color: Color(0xffe9e9e5),
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w700,
+                                  ),),
+                              ],
                             ),
                           ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 70),
+                            child: Icon(Icons.medical_services_sharp),
+                          ),
+
+                        ],
+                      ),
+                      Container(
+                          padding:const EdgeInsets.all(5),
+                        width: 270,
+                        height: 250,
+                         decoration: BoxDecoration(
+                           borderRadius: BorderRadius.all(Radius.circular(15),
+
+                           ),
+                         ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(60),
+                              child: Image.asset('assets/images/pic10.jpg')),),
+                      Container(
+                        child: Row(
                           children: [
-                            Text('Steve Johnson',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700,
-                              ),),
-                            Text('30 Sec Ago',
-                              style: TextStyle(
-                                color: Color(0xffe9e9e5),
-                                fontSize: 13,
-                                fontWeight: FontWeight.w700,
-                              ),),
+                            Container(
+                              margin:const EdgeInsets.all(10),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Icon(Icons.heart_broken,
+                                  color: Colors.red,),
+                                ),),
+                            Container(
+                                margin:const EdgeInsets.all(10),
+                                child: InkWell(
+                                    onTap: (){},
+                                    child: Icon(Icons.messenger_outline))),
+                            Container(
+                                margin:const EdgeInsets.all(5),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Icon(Icons.send,
+                                  color: Colors.grey,),
+                                )),
+                            Container(
+                                margin:const EdgeInsets.only(left: 100),
+                                child: InkWell(
+                                  onTap: (){},
+                                  child: Icon(Icons.bookmark_add_outlined,
+                                    color: Colors.grey,),
+                                )),
                           ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 40),
-                          child: Icon(Icons.medical_services_sharp),
-                        ),
 
-                      ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text('4,555,600 Liked by David',
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                color: Colors.white,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: (){},
+                      child: Icon(Icons.add_home_rounded,
+                      color: Colors.deepOrangeAccent,
+                      size: 20,),
                     ),
+                    InkWell(
+                        onTap: (){},
+                        child: Icon(Icons.comment)),
+                    InkWell(
+                      onTap: (){},
+                      child: Icon(Icons.add_box,
+                      color: Colors.deepOrangeAccent,
+                      size: 50,),
+                    ),
+                    InkWell(
+                        onTap: (){},
+                        child: Icon(Icons.comment)),
+                    InkWell(
+                        onTap: (){},
+                        child: Icon(Icons.search)),
+                    InkWell(
+                        onTap: (){},
+                        child: Icon(Icons.person_off_outlined)),
+
+
                   ],
                 ),
               ),
+
             ],
           ),
         ),

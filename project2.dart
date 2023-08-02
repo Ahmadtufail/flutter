@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
-class project2 extends StatelessWidget {
+
+class project2 extends StatefulWidget {
   const project2({super.key});
+
+  @override
+  State<project2> createState() => _project2State();
+}
+
+class _project2State extends State<project2> {
+
+  int order = 1;
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,16 +57,22 @@ class project2 extends StatelessWidget {
                         child: Row(
                           children: [
                             InkWell(
-                              onTap: (){},
+                              onTap: (){
+                                order--;
+                                setState(() {
+
+                                });
+                              },
                               child: Card(
                                 color: Color(0xffe2dcd7),
                                 elevation: 6.0,
                                 child: Container(
 
-                                    width: 40,
-                                    height: 40,
+                                    width: 30,
+                                    height: 30,
                                     child: Center(
                                       child: Text('-',
+
                                       style: TextStyle(
                                         fontSize: 22,
                                         fontWeight: FontWeight.w600,
@@ -66,7 +85,8 @@ class project2 extends StatelessWidget {
                             SizedBox(
                               width: 5,
                             ),
-                            Text('01',
+                            Text(
+                            order.toString(),
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 20,
@@ -76,14 +96,20 @@ class project2 extends StatelessWidget {
                               width: 5,
                             ),
                             InkWell(
-                              onTap: (){},
+                              onTap: (){
+                                order++;
+                                setState(() {
+
+                                });
+                                },
+
                               child: Card(
                                 color: Color(0xffcd461d),
                                 elevation: 6.0,
                                 child: Container(
 
-                                  width: 40,
-                                  height: 40,
+                                  width: 30,
+                                  height: 30,
                                   child: Center(
                                     child: Text('+',
                                       style: TextStyle(
@@ -130,7 +156,7 @@ class project2 extends StatelessWidget {
                           children: [
                             Text('523 KKal',
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 15,
                               fontWeight: FontWeight.w600,
                             ),
                             ),
@@ -156,7 +182,7 @@ class project2 extends StatelessWidget {
                           children: [
                             Text('4.6',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -182,7 +208,7 @@ class project2 extends StatelessWidget {
                           children: [
                             Text('30 Min',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -232,7 +258,7 @@ class project2 extends StatelessWidget {
                           ),
                         ),
                       ],
-                      
+
                     ),
                     Column(
                       children: [
@@ -329,19 +355,28 @@ class project2 extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.redAccent,
                           padding:const EdgeInsets.all(10),
+                          shape:
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+
 
 
                         ),
                           onPressed: (){},
-                          child: Text('Add to Cart',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.w600,
-                          ),),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text('Add to Cart',
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w600,
+                            ),),
+                          ),
                       ),
                     ],
                   ),
                 ),
+                Lottie.asset('assets/animation/animation_lks53n4m.json'),
               ],
             ),
           ),
