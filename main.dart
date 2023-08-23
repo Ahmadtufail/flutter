@@ -1,14 +1,38 @@
+
+import 'package:astask/1tuseday.dart';
+import 'package:astask/2ndlast.dart';
+import 'package:astask/Nutrition/Nutrition_home.dart';
+import 'package:astask/sample.dart';
+import 'package:astask/task.dart';
+import 'package:astask/task7/31.dart';
 import 'package:flutter/material.dart';
-import 'package:samle/Task2.dart';
-import 'package:samle/Task3.dart';
-import 'package:samle/Task4.dart';
-import 'package:samle/sample.dart';
-import 'package:samle/task.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 
 void main() {
-  runApp(const Task());
+  runApp(const splashscreen());
 }
+
+class splashscreen extends StatelessWidget {
+  const splashscreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: AnimatedSplashScreen(
+          splash: 'assets/images/Herb.png',
+          nextScreen: MyApp(),
+          splashTransition: SplashTransition.scaleTransition,
+
+        ),
+      ),
+    );
+  }
+}
+
+
+
 
 
 class Home extends StatelessWidget {
@@ -22,13 +46,14 @@ class Home extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                'Welcome to App',
+                'Perfum',
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 50,
                   fontWeight: FontWeight.w400,
                   color: Color(0xff5a9fd2),
                 ),
               ),
+
 
 
               Stack(
@@ -37,77 +62,61 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.all(15),
                     width: 300,
                     height: 400,
-                    child: Card(
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(350),
-                          topRight: Radius.circular(15),
+                      child: Card(
+                       shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(350),
+                            topRight: Radius.circular(15),
+                          ),
                         ),
-                      ),
-                      elevation: 10,
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            'assets/images/perfume.png',
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Text('Perfume'),
-                              Text('300Rs'),
-                            ],
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.green
+                        elevation: 10,
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/perfume.png',
                             ),
-                            onPressed: (){},
-                            child: Text(
-                                'Add to card'
-                            ),
-                          ),
-                        ],
-                      ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text('Perfume'),
+                                Text(
+                                  '5900 Rs',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400,
 
-                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            ElevatedButton(
+                              onPressed: (){},
+                              child: Text(
+                                  'Add to card'
+                              ),
+                            ),
+                          ],
+                        ),
+
+                      ) ,
                   ),
                   Positioned(
-                    left: 260,
+                    left: 250,
                     top: 40,
                     child: Container(
                       height: 310,
-                      width: 45,
-
+                      width: 40,
                       decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(200),
-                          topRight: Radius.circular(20),
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20),
-                        ),
-                      ),
-                      child: RotatedBox(
-                        quarterTurns: 1,
-                        child: Container(
-                          padding: EdgeInsets.only(
-                            left: 20,
-                          ),
-                          child: Center(
-                            child: Text('Shalimar Perfume',
-                            style:TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white,
-                            ),
-                            ),
-                          ),
-                        ),
-                      ),
+                          color: Colors.blue,
+                          borderRadius:BorderRadius.only(
+                            topLeft: Radius.circular(200),
+                            topRight: Radius.circular(5),
 
+                          )
+                      ),
                     ),
-                  ),
+                    ),
+
                 ],
               ),
             ],
